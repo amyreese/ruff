@@ -31,11 +31,11 @@ use ruff_workspace::Settings;
 use crate::cache::{Cache, FileCacheKey, LintCacheData};
 
 #[derive(Debug, Default, PartialEq)]
-pub(crate) struct Diagnostics {
-    pub(crate) messages: Vec<Message>,
-    pub(crate) fixed: FixMap,
-    pub(crate) imports: ImportMap,
-    pub(crate) notebook_indexes: FxHashMap<String, NotebookIndex>,
+pub struct Diagnostics {
+    pub messages: Vec<Message>,
+    pub fixed: FixMap,
+    pub imports: ImportMap,
+    pub notebook_indexes: FxHashMap<String, NotebookIndex>,
 }
 
 impl Diagnostics {
@@ -180,7 +180,7 @@ impl AddAssign for FixMap {
 }
 
 /// Lint the source code at the given `Path`.
-pub(crate) fn lint_path(
+pub fn lint_path(
     path: &Path,
     package: Option<&Path>,
     settings: &LinterSettings,

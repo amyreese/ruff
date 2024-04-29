@@ -73,7 +73,7 @@ impl FileCacheKey {
 /// This type manages the cache file, reading it from disk and writing it back
 /// to disk (if required).
 #[derive(Debug)]
-pub(crate) struct Cache {
+pub struct Cache {
     /// Location of the cache.
     path: PathBuf,
     /// Package cache read from disk.

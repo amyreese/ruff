@@ -24,7 +24,7 @@ use crate::printer::{Flags as PrinterFlags, Printer};
 pub mod args;
 mod cache;
 mod commands;
-mod diagnostics;
+pub mod diagnostics;
 mod panic;
 mod printer;
 pub mod resolve;
